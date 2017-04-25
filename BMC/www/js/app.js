@@ -1,4 +1,4 @@
-angular.module('bmc', ['ionic'])
+angular.module('bmc', ['ionic', 'bmc.settings'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
