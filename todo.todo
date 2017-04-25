@@ -1,0 +1,30 @@
+General:
+    ☐ Navigation Pages
+    ☐ Basic CSS Theme
+    ☐ First Time Run
+    ☐ Home Page Layout
+
+Calendar:
+    ☐ Google Calendar API
+    ☐ Ionic Card Listing
+
+    Push Notifications:
+        ☐ A Service like Azure or Wordpress
+        ☐ Integrate Into Background Processes
+        ☐ Notify User by Event Creator
+
+Organizations:
+    ☐ Landing Page
+    ☐ About Us
+    ☐ Contacts (With Functionality)
+
+Donate:
+    ☐ Square Stuff
+
+Dues:
+    ☐ Square Stuff
+
+Settings:
+    ☐ Notification Preferences
+    ☐ ?Battery Saving
+    ☐ ?Data Usage
