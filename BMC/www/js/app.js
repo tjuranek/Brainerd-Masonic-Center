@@ -1,4 +1,4 @@
-angular.module('bmc', ['ionic', 'bmc.controllers'])
+angular.module('bmc', ['ionic'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -19,46 +19,62 @@ angular.module('bmc', ['ionic', 'bmc.controllers'])
     .state('app', {
     url: '/app',
     abstract: true,
-    templateUrl: 'templates/menu.html',
-    controller: 'AppCtrl'
+    templateUrl: 'templates/menu.html'
   })
 
-  .state('app.search', {
-    url: '/search',
+  .state('app.calendar', {
+    url: '/calendar',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: 'templates/calendar.html'
       }
     }
   })
 
-  .state('app.browse', {
-      url: '/browse',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/browse.html'
-        }
-      }
-    })
-    .state('app.playlists', {
-      url: '/playlists',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
-        }
-      }
-    })
-
-  .state('app.single', {
-    url: '/playlists/:playlistId',
+  .state('app.donations', {
+    url: '/donations',
     views: {
       'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
+        templateUrl: 'templates/donations.html'
+      }
+    }
+  })
+
+  .state('app.dues', {
+    url: '/dues',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/dues.html'
+      }
+    }
+  })
+
+  .state('app.home', {
+    url: '/home',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/home.html'
+      }
+    }
+  })
+
+  .state('app.organizations', {
+    url: '/organizations',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/organizations.html'
+      }
+    }
+  })
+
+  .state('app.settings', {
+    url: '/settings',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/settings.html'
       }
     }
   });
-  // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+
+  $urlRouterProvider.otherwise('/app/home');
 });
