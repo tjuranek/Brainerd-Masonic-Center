@@ -1,5 +1,19 @@
 <ion-view view-title="Settings">
   <ion-content>
-    <h1>Settings</h1>
-  </ion-content>
+    <h1 id="settingsHeader">Settings</h1>
+    <ion-item>
+  <ion-toggle disabled checked="false">Enable Push Notifications</ion-toggle>
+<div id='push'>
+  <p>Organizations</p>
+  <ion-checkbox disabled checked="false">Aurora Lodge 100</ion-checkbox>
+  <ion-checkbox disabled checked="false">Addzuhman Shrine</ion-checkbox>
+  <ion-checkbox disabled checked="false">Order of the Eastern Star</ion-checkbox>
+  <ion-checkbox disabled checked="false">Oriental Band</ion-checkbox>
+  <ion-checkbox disabled checked="false">Ladies Auxiliary</ion-checkbox>
+</div>
+<br>
+<ion-toggle disabled checked="false">Power Save Mode</ion-toggle>
+<button id="btnDataUsage" ion-button>Data Usage</button>
+</ion-item>
+</ion-content>
 </ion-view>
