@@ -66,6 +66,47 @@ angular.module('bmc', ['ionic', 'bmc.settings', 'bmc.calendar'])
       }
     }
   })
+  .state('app.aurora', {
+    url: '/aurora',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/aurora.html'
+      }
+    }
+  })
+  .state('app.addzuhman', {
+    url: '/addzuhman',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/addzuhman.html'
+      }
+    }
+  })
+
+  .state('app.auxiliary', {
+    url: '/auxiliary',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/auxiliary.html'
+      }
+    }
+  })
+  .state('app.band', {
+    url: '/band',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/band.html'
+      }
+    }
+  })
+  .state('app.oes', {
+    url: '/oes',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/oes.html'
+      }
+    }
+  })
 
   .state('app.settings', {
     url: '/settings',
@@ -74,7 +115,9 @@ angular.module('bmc', ['ionic', 'bmc.settings', 'bmc.calendar'])
         templateUrl: 'templates/settings.html'
       }
     }
-  });
+  }) ;
+
+
 
   $urlRouterProvider.otherwise('/app/home');
 });
