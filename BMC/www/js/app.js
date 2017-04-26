@@ -1,4 +1,4 @@
-angular.module('bmc', ['ionic', 'bmc.settings'])
+angular.module('bmc', ['ionic', 'bmc.settings', 'bmc.calendar'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
