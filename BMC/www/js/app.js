@@ -66,6 +66,22 @@ angular.module('bmc', ['ionic', 'bmc.settings', 'bmc.calendar'])
       }
     }
   })
+  .state('app.contacts', {
+    url: '/contacts',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/contacts.html'
+      }
+    }
+  })
+  .state('app.about', {
+    url: '/about',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/about.html'
+      }
+    }
+  })
   .state('app.aurora', {
     url: '/aurora',
     views: {
