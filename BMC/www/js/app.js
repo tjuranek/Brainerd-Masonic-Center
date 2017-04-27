@@ -1,4 +1,4 @@
-angular.module('bmc', ['ionic', 'bmc.settings', 'bmc.calendar'])
+angular.module('bmc', ['ionic', 'bmc.calendar', 'bmc.organizations', 'bmc.settings'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -66,60 +66,12 @@ angular.module('bmc', ['ionic', 'bmc.settings', 'bmc.calendar'])
       }
     }
   })
-  .state('app.contacts', {
-    url: '/contacts',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/contacts.html'
-      }
-    }
-  })
-  .state('app.about', {
-    url: '/about',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/about.html'
-      }
-    }
-  })
-  .state('app.aurora', {
-    url: '/aurora',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/aurora.html'
-      }
-    }
-  })
-  .state('app.addzuhman', {
-    url: '/addzuhman',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/addzuhman.html'
-      }
-    }
-  })
 
-  .state('app.auxiliary', {
-    url: '/auxiliary',
+  .state('app.sub_organization', {
+    url: '/sub_organization',
     views: {
       'menuContent': {
-        templateUrl: 'templates/auxiliary.html'
-      }
-    }
-  })
-  .state('app.band', {
-    url: '/band',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/band.html'
-      }
-    }
-  })
-  .state('app.oes', {
-    url: '/oes',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/oes.html'
+        templateUrl: 'templates/sub_organization.html'
       }
     }
   })
@@ -131,7 +83,7 @@ angular.module('bmc', ['ionic', 'bmc.settings', 'bmc.calendar'])
         templateUrl: 'templates/settings.html'
       }
     }
-  }) ;
+  });
 
 
 
