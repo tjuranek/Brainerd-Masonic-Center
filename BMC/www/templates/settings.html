@@ -6,13 +6,13 @@
     <div id='push'>
       <p>Organizations</p>
       <ion-checkbox ng-change="AuroraChanged()" ng-model="AuroraChecked">Aurora Lodge 100</ion-checkbox>
-      <ion-checkbox ng-change="AddzuhmanChanged()" ng-model="AddzuhmanChecked" disabled checked="false">Addzuhman Shrine</ion-checkbox>
+      <ion-checkbox ng-change="AddzuhmanChanged()" ng-model="AddzuhmanChecked">Addzuhman Shrine</ion-checkbox>
       <ion-checkbox ng-change="OESChanged()" ng-model="OESChecked" disabled checked="false">Order of the Eastern Star</ion-checkbox>
       <ion-checkbox ng-change="BandChanged()" ng-model="BandChecked" disabled checked="false">Oriental Band</ion-checkbox>
       <ion-checkbox ng-change="AuxiliaryChanged()" ng-model="AuxiliaryChecked" disabled checked="false">Ladies Auxiliary</ion-checkbox>
     </div>
     <br>
     <ion-toggle disabled checked="false">Power Save Mode</ion-toggle>
-    <button id="btnDataUsage" ion-button>Data Usage</button>
+    <button id="btnDataUsage" class="button button-block button-positive">Data Usage</button>
   </ion-content>
 </ion-view>
