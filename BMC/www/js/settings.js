@@ -1,10 +1,15 @@
 angular.module('bmc.settings', [])
 
   .controller('settings', function($scope) {
-    //try reading from JSON if it already exists
+    var setview = function(a) {
+      if (a) {
+        document.getElementById('push').style.display = 'block';
+      } else {
+        document.getElementById('push').style.display = 'none';
+      }
+    }//try reading from JSON if it already exists
     try {
       var all = JSON.parse(window.localStorage.getItem("pushNotifications"));
-      console.log(all);
       var notif_Aurora = all.aurora;
       var notif_Addzuhman = all.addzuhman;
       var notif_OES = all.oes;
@@ -12,7 +17,7 @@ angular.module('bmc.settings', [])
       var notif_Aux = all.aux;
       var allow_notif = all.notif;
     }
-//if it doesn't exist, create it and initialize values
+    //if it doesn't exist, create it and initialize values
     catch (eee) {
       var notif_Aurora = false;
       var notif_Addzuhman = false;
@@ -28,61 +33,28 @@ angular.module('bmc.settings', [])
     $scope.OESChecked = notif_OES;
     $scope.AddzuhmanChecked = notif_Addzuhman;
     $scope.BandChecked = notif_Band;
-    if (allow_notif) {
-      document.getElementById('push').style.display = 'block';
-    } else {
-      document.getElementById('push').style.display = 'none';
-    }
-
-
-    $scope.notifChanged = function() {
-      if (allow_notif) {
-        allow_notif = false;
-        document.getElementById('push').style.display = 'none';
-      } else {
-        allow_notif = true;
-        document.getElementById('push').style.display = 'block';
-      }
-      updateInformation();
-    }
-    $scope.AuroraChanged = function() {
-      if (notif_Aurora)
-        notif_Aurora = false;
-      else {
-        notif_Aurora = true;
-      }
-      updateInformation();
-    }
-
-    $scope.AddzuhmanChanged = function() {
-      if (notif_Addzuhman)
-        notif_Addzuhman = false;
-      else {
-        notif_Addzuhman = true;
-      }
-      updateInformation();
-    }
-    $scope.OESChanged = function() {
-      if (notif_OES)
-        notif_OES = false;
-      else {
-        notif_OES = true;
-      }
-      updateInformation();
-    }
-    $scope.BandChanged = function() {
-      if (notif_Band)
-        notif_Band = false;
-      else {
-        notif_Band = true;
-      }
-      updateInformation();
-    }
-    $scope.AuxiliaryChanged = function() {
-      if (notif_Aux)
-        notif_Aux = false;
-      else {
-        notif_Aux = true;
+    setview(allow_notif);
+    $scope.change = function(a) {
+      switch (a) {
+        case 1:
+          notif_Aurora = swap(notif_Aurora);
+          break;
+        case 2:
+          notif_Addzuhman = swap(notif_Addzuhman);
+          break;
+        case 3:
+          notif_OES = swap(notif_OES);
+          break;
+        case 4:
+          notif_Band = swap(notif_Band);
+          break;
+        case 5:
+          notif_Aux = swap(notif_Aux);
+          break;
+        case 6:
+          allow_notif = swap(allow_notif);
+          setview(allow_notif);
+          break;
       }
       updateInformation();
     }
@@ -98,4 +70,7 @@ angular.module('bmc.settings', [])
       window.localStorage.setItem("pushNotifications", JSON.stringify(appData));
       console.log(window.localStorage.getItem("pushNotifications"));
     };
+    var swap = function(variable) {
+      return (variable == false);
+    }
   });
