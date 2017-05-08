@@ -2,10 +2,10 @@
 <widget id="com.ionicframework.bmc737217" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>BMC</name>
   <description>
-        An Ionic Framework and Cordova project.
+        The official app of the Brainerd Masonic Center
     </description>
   <author email="you@example.com" href="http://example.com/">
-      Your Name Here
+      Central Lakes College
     </author>
   <content src="index.html"/>
   <access origin="*"/>
