@@ -1,7 +1,7 @@
 angular.module('bmc.organizations', [])
 
 .controller('organizations', function($state, $scope) {
-  var JSONBand = {
+  var jsonBand = {
     "name": "Oriental Band",
     "about1": "Shriners are men who enjoy life, fun is a large part of the shrine. Shriners, along with their ladies,   their families and friends have many opportunities to enjoy the fun the Shrine has to offer.   Activities such as parades, dances, circuses, and parties offer something for every member of your family.   Many of these activities help support the Shrine's philanthropy... Shriners Hospitals for Children!",
     "about2": "Our mission is to be the Premiere Fraternal Organization for men of good character committed to   providing attractive, quality programs and services for its members, their families and friends in a   spirited fun, fellowship and social camaraderie. Fostering self improvement through leadership,   education, and the perpetuation of moral values and community and serving mankind through the resources   of its great philanthropy, the Shriners Hospitals for Children.",
@@ -22,7 +22,7 @@ angular.module('bmc.organizations', [])
     }]
   }
 
-  var JSONAddzuhman = {
+  var jsonShrine = {
     "name": "Addzuhman Shrine",
     "about1": "Shriners are a spin-off of the Masons.  Founded in 1872, Shiners International continue with   the values and principles that have guided Masons for centuries while adding the elements of fun,   family and philanthropy.  We are a brotherhood of men dedicated to family and relief of children,   while committed to self improvement for the greater good.  We come from a diversion of backgrounds.    This, along with our shared values, desire to have fun, and dedication to help children and families  in need, is the mortar that binds us together and builds lifetime relationships.",
     "about2": "",
@@ -63,7 +63,9 @@ angular.module('bmc.organizations', [])
       }
     }]
   }
-  var JSONAurora = {
+
+  console.log(jsonShrine);
+  var jsonLodge = {
     "name": "Aurora Lodge",
     "about1": "Aurora Lodge #100 is part of the over 12000 men who proudly call themselves Masons of Minnesota. We are located at 205 1/2 South Sixth St in downtown Brainerd.  We meet on the 2nd and 4th Tuesday of each month, serving dinner at 6 PM and meeting starting at 7 PM.",
     "about2": "Freemasonry is the oldest and largest fraternity in existence today with it roots going back centuries.   In ancient times, stonemasons and other craftsman bonded together for the purpose of gaining better wages,   thus providing a better lifestyle for their families.  These organizations were called guilds and they met   in shelter homes they called lodges.  The square and compass became the symbol of their trades and brotherhood.   Over time, Freemasonry evolved into what it  is today.  We are a brotherhood of men that is built on the   foundation of self improvement, respect for others, caring for the less fortunate,and helping those in need.    Through these actions we develop honesty, integrity, kindness, and fairness and hope to better ourselves and   our communities.",
@@ -111,7 +113,7 @@ angular.module('bmc.organizations', [])
       }
     }]
   }
-  var JSONOES = {
+  var jsonStar = {
     "name": "Order of the Eastern Star",
     "about1": "The Order of the Eastern Star is a fraternal organization that both men and women can join.   It was established in 1850 by Rob Morris, a lawyer and educator from Boston, Massachusetts,  who had been an official with the Freemasons. It is based on teachings from the Bible,   but is open to all people  who have a belief in a God.",
     "about2": "Alpha Chapter #23 was Constituted:  May 7, 1888 in Brainerd, Minnesota,  which makes this   Chapter over 125 years old.",
@@ -131,7 +133,8 @@ angular.module('bmc.organizations', [])
       }
     }]
   }
-  var JSONLadies = {
+
+  var jsonAuxiliary = {
     "name": "Ladies Auxiliary",
     "about1": "Since 1923, WGA4KIDS - Shriners Hospitals for Children Twin Cities has worked to provide a loving and supportive  environment for children and their families while they receive treatment at the hospital. Our staff,   comprised completely of volunteers, provides wheelchairs, clothing, toiletries, comfort items and toys  for patients.",
     "about2": "One of 22 Shriners Hospitals across the country, the Shriners Hospitals for Children Twin Cities   provides state of the art orthopedic care to more than 5,000 children annually regardless of the   family's financial situation or ability to pay for services. The hospital and WGA4KIDS both operate   from the compassionate generosity of donors.",
@@ -165,25 +168,26 @@ angular.module('bmc.organizations', [])
       }
     }]
   }
-  console.log(JSONLadies);
-  $scope.goToOrg = function(org) {
-    switch (org) {
-      case 1:
-        window.localStorage.setItem("currentSubOrganization", JSON.stringify(JSONAurora));
+
+  $scope.goToOrg = function(organization) {
+    switch (organization) {
+      case 'lodge':
+        window.localStorage.setItem("currentSubOrganization", JSON.stringify(jsonLodge));
         break;
-      case 2:
-        window.localStorage.setItem('currentSubOrganization', JSON.stringify(JSONOES));
+      case 'order':
+        window.localStorage.setItem('currentSubOrganization', JSON.stringify(jsonOrder));
         break;
-      case 3:
-        window.localStorage.setItem('currentSubOrganization', JSON.stringify(JSONAddzuhman));
+      case 'shrine':
+        window.localStorage.setItem('currentSubOrganization', JSON.stringify(jsonShrine));
         break;
-      case 4:
-        window.localStorage.setItem('currentSubOrganization', JSON.stringify(JSONBand));
+      case 'band':
+        window.localStorage.setItem('currentSubOrganization', JSON.stringify(jsonBand));
         break;
-      case 5:
-        window.localStorage.setItem('currentSubOrganization', JSON.stringify(JSONLadies));
+      case 'auxiliary':
+        window.localStorage.setItem('currentSubOrganization', JSON.stringify(jsonAuxiliary));
         break;
     }
+
     $state.go('app.sub_organization');
   }
 })
