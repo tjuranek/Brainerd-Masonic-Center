@@ -1,7 +1,7 @@
-<ion-view view-title="Sub Organization" >
+<ion-view view-title="Sub Organization">
   <div ng-controller="sub_organizations">
-  <ion-content>
-    <br><br>
+    <ion-content>
+      <br><br>
       <h1>{{org.name}}</h1>
       <p>{{org.about1}}</p>
       <br><br>
@@ -10,10 +10,14 @@
       <div ng-repeat="x in org.contacts">
         <p>{{x.contact.name}}</p>
         <p>{{x.contact.role}}</p>
-        <p><a href="mailto:{{x.contact.email}}">{{x.contact.email}}</a></p>
-        <p><a href="tel:+1{{x.contact.phone}}">{{x.contact.phone}}</a></p>
+        <p>
+          <a href="mailto:{{x.contact.email}}">{{x.contact.email}}</a>
+        </p>
+        <p>
+          <a href="tel:+1{{x.contact.phone}}">{{x.contact.phone}}</a>
+        </p>
         <br><br>
       </div>
-  </ion-content>
-</div>
+    </ion-content>
+  </div>
 </ion-view>
