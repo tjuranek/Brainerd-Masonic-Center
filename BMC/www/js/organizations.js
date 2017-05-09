@@ -8,5 +8,30 @@ angular.module('bmc.organizations', [])
 })
 
 .controller('sub_organizations', function($scope) {
-  var currentSubOrganization = window.localStorage.getItem('currentSubOrganization');
+    var JSONBand = {
+    "name": "Oriental Band",
+    "about1": "this is about us infor",
+    "about2": "of its great philanthropy, the Shriners Hospitals for Children.",
+    "contacts": [
+        {
+            "contact": {
+                "role" : "President",
+                "name": "Jeff Harmon",
+                "email": "jeff_harmon@hotmail.com",
+                "phone": "218-839-1500"
+            }
+        },
+        {
+            "contact": {
+                "role" : "Treasurer/Secretary",
+                "name" : "Jeff Van Horn",
+                "email": "jffvanhorn@yahoo.com",
+                "phone": ""
+            }
+        }
+    ]
+}
+
+
+  $scope.currentSubOrganization = window.localStorage.getItem('currentSubOrganization');
 });
