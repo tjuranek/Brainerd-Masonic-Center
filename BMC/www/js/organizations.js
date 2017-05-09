@@ -113,7 +113,7 @@ angular.module('bmc.organizations', [])
       }
     }]
   }
-  var jsonStar = {
+  var jsonOrder = {
     "name": "Order of the Eastern Star",
     "about1": "The Order of the Eastern Star is a fraternal organization that both men and women can join.   It was established in 1850 by Rob Morris, a lawyer and educator from Boston, Massachusetts,  who had been an official with the Freemasons. It is based on teachings from the Bible,   but is open to all people  who have a belief in a God.",
     "about2": "Alpha Chapter #23 was Constituted:  May 7, 1888 in Brainerd, Minnesota,  which makes this   Chapter over 125 years old.",
@@ -193,6 +193,5 @@ angular.module('bmc.organizations', [])
 })
 
 .controller('sub_organizations', function($scope) {
-  var org = JSON.parse((window.localStorage.getItem('currentSubOrganization')));
-  $scope.org = org
+  $scope.organization = JSON.parse((window.localStorage.getItem('currentSubOrganization')));
 });

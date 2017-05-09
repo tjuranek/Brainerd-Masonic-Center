@@ -1,23 +1,30 @@
-<ion-view view-title="Sub Organization">
-  <div ng-controller="sub_organizations">
-    <ion-content>
-      <br><br>
-      <h1>{{org.name}}</h1>
-      <p>{{org.about1}}</p>
-      <br><br>
-      <p>{{org.about2}}</p>
-      <h3>Contacts</h3>
-      <div ng-repeat="x in org.contacts">
-        <p>{{x.contact.name}}</p>
-        <p>{{x.contact.role}}</p>
+<ion-view view-title="{{organization.name}}" ng-controller="sub_organizations">
+  <ion-content>
+    <div class="list card">
+      <div class="item item-avatar">
+        <img src="http://www.freeiconspng.com/uploads/profile-icon-9.png">
+        <h2>{{organization.name}}</h2>
         <p>
-          <a href="mailto:{{x.contact.email}}">{{x.contact.email}}</a>
+          Established Some Time Ago
         </p>
-        <p>
-          <a href="tel:+1{{x.contact.phone}}">{{x.contact.phone}}</a>
-        </p>
-        <br><br>
       </div>
-    </ion-content>
-  </div>
+
+      <div class="item item-body">
+        <p>{{organization.about1}}</p>
+        <p>{{organization.about2}}</p>
+
+        <hr />
+
+        <div ng-repeat="contact in organization.contacts">
+          <h3>{{contact.contact.name}} - {{contact.contact.role}}</h3>
+          <p>
+            <a href="mailto:{{contact.contact.email}}">{{contact.contact.email}}</a>
+          </p>
+          <p>
+            <a href="tel:+1{{contact.contact.phone}}">{{contact.contact.phone}}</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </ion-content>
 </ion-view>
