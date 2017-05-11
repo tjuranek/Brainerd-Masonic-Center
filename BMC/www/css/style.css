@@ -1,15 +1,18 @@
-ion-content {
+
+/*ion-content {
     margin-left: 5%;
     margin-right: 5%;
     width: 90%;
 }
+*/
+
 
 .iconRow {
     text-align: center;
 }
 
 .homeIconHolder {
-    border-color: #303030;
+    border-color: #ffffff;
     border-radius: 10px;
     border-style: solid;
     border-width: 2px;
@@ -21,3 +24,18 @@ ion-content {
 .homeIcon {
     font-size: 50px;
 }
+
+ion-content {
+    color: white;
+    background-color: #1388C0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+}
+/*
+div {
+    background-color: #4169e1;
+    color: #ffffff;
+}
+*/
