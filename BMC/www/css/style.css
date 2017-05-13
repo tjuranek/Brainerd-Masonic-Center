@@ -1,41 +1,54 @@
+/* General Styling */
 
-/*ion-content {
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 90%;
+ion-content {
+  color: white;
+  background-color: #002366;
 }
-*/
 
+
+/* Navigation Styling */
+
+.nav-bar-block, .bar {
+  background-color: #e59e18 !important;
+}
+
+.bar.bar-stable .title {
+  color: #ffffff;
+}
+
+.bar-stable .button.button-icon {
+  color: #ffffff;
+}
+
+
+/* Home Page Styling */
+
+#logo {
+  display: block;
+  width: 80% !important;
+  margin-left: 10%;
+  margin-top: 2%;
+}
 
 .iconRow {
-    text-align: center;
+  text-align: center;
+  color: #e59e18;
 }
 
 .homeIconHolder {
-    border-color: #ffffff;
-    border-radius: 10px;
-    border-style: solid;
-    border-width: 2px;
-    display: inline-block;
-    margin-top: 30px;
-    width: 45%;
+  border-color: #e59e18;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  display: inline-block;
+  margin-top: 30px;
+  width: 45%;
 }
 
 .homeIcon {
-    font-size: 50px;
-}
-
-ion-content {
-    color: white;
-    background-color: #1388C0;
+  font-size: 50px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: white;
+  color: white;
 }
-/*
-div {
-    background-color: #4169e1;
-    color: #ffffff;
-}
-*/
