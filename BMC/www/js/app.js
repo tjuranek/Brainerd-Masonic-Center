@@ -31,20 +31,11 @@ angular.module('bmc', ['ionic', 'bmc.calendar', 'bmc.organizations', 'bmc.settin
     }
   })
 
-  .state('app.donations', {
-    url: '/donations',
+  .state('app.duesdonations', {
+    url: '/duesdonations',
     views: {
       'menuContent': {
-        templateUrl: 'templates/donations.html'
-      }
-    }
-  })
-
-  .state('app.dues', {
-    url: '/dues',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/dues.html'
+        templateUrl: 'templates/duesdonations.html'
       }
     }
   })
