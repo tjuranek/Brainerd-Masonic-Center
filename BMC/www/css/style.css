@@ -20,6 +20,12 @@ ion-content {
   color: #ffffff;
 }
 
+.item-complex .item-content, .item-radio .item-content {
+    background-color: #002366;
+    color: #e59e18;
+    font-size: 115%;
+}
+
 
 /* Home Page Styling */
 
