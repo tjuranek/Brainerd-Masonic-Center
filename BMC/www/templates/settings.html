@@ -1,16 +1,27 @@
 <ion-view view-title="Settings" ng-controller="settings">
   <ion-content>
-    <ion-toggle ng-change='change(6)' ng-model='NotifChecked'>Enable Push Notifications</ion-toggle>
-    <div id='push'>
-      <p class="item item-divider">Organizations</p>
-      <ion-checkbox ng-change="change(1)" ng-model="AuroraChecked">Aurora Lodge 100</ion-checkbox>
-      <ion-checkbox ng-change="change(2)" ng-model="AddzuhmanChecked">Addzuhman Shrine</ion-checkbox>
-      <ion-checkbox ng-change="change(3)" ng-model="OESChecked" disabled checked="false">Order of the Eastern Star</ion-checkbox>
-      <ion-checkbox ng-change="change(4)" ng-model="BandChecked" disabled checked="false">Oriental Band</ion-checkbox>
-      <ion-checkbox ng-change="change(5)" ng-model="AuxiliaryChecked" disabled checked="false">Ladies Auxiliary</ion-checkbox>
+
+    <div class="card">
+      <div class="item item-text-wrap">
+        <p>
+          The Brainerd Masonic Center app provides notifications to their members to remind them about upcoming events or alerts. Below you can choose which organizations you would like to recieve notifications for:
+        </p>
+
+        <br/>
+
+        <ion-toggle ng-change='change(6)' ng-model='NotifChecked'>Enable Push Notifications</ion-toggle>
+
+        <br/>
+
+        <div id='push'>
+          <div class="item item-divider">Organizations</div>
+          <ion-checkbox ng-change="change(1)" ng-model="AuroraChecked">Aurora Lodge #100, Aplha Chamber #23</ion-checkbox>
+          <ion-checkbox ng-change="change(2)" ng-model="AddzuhmanChecked">Order of the Eastern Star</ion-checkbox>
+          <ion-checkbox ng-change="change(3)" ng-model="OESChecked" disabled checked="false">Aadzuhman Shrine Club</ion-checkbox>
+          <ion-checkbox ng-change="change(4)" ng-model="BandChecked" disabled checked="false">AAD Oriental Band</ion-checkbox>
+          <ion-checkbox ng-change="change(5)" ng-model="AuxiliaryChecked" disabled checked="false">Women's General Auxiliary</ion-checkbox>
+        </div>
+      </div>
     </div>
-    <br>
-    <ion-toggle disabled checked="false">Power Save Mode</ion-toggle>
-    <button id="btnDataUsage" class="button button-block button-positive">Data Usage</button>
   </ion-content>
 </ion-view>
