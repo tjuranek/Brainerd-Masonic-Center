@@ -3,10 +3,7 @@
     <div class="list card">
       <div class="item item-avatar">
         <img src="http://www.freeiconspng.com/uploads/profile-icon-9.png">
-        <h2>{{organization.name}}</h2>
-        <p>
-          Established Some Time Ago
-        </p>
+        <h2 style="color: #000000;">{{organization.name}}</h2>
       </div>
 
       <div class="item item-body">
@@ -16,11 +13,11 @@
         <hr />
 
         <div ng-repeat="contact in organization.contacts">
-          <h3>{{contact.contact.name}} - {{contact.contact.role}}</h3>
-          <p>
+          <h3 style="color: #000000;">{{contact.contact.name}} - {{contact.contact.role}}</h3>
+          <p style="color: #000000;">
             <a href="mailto:{{contact.contact.email}}">{{contact.contact.email}}</a>
           </p>
-          <p>
+          <p style="color: #000000;">
             <a href="tel:+1{{contact.contact.phone}}">{{contact.contact.phone}}</a>
           </p>
         </div>
